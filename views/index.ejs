@@ -65,7 +65,7 @@
         var pass = document.getElementById('password');
 
         // Connect to socket.io
-        var socket = io.connect('http://127.0.0.1:3000');
+        var socket = io.connect('5000');
         // Check for connection
         if (socket !== undefined) {
             console.log('socket aquired...');
@@ -83,7 +83,7 @@
             if (data.answer == 0) {
                 sessionStorage.setItem('username', data.username);
                 sessionStorage.setItem('email',emi.value.toString());
-                document.location.href = './HomePage/index.html';
+                document.location.href = 'homepage.ejs';
             }
             else
                 alert("Wrong email or password");
